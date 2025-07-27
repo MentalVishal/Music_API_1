@@ -1,86 +1,30 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  margin: 0;
-  padding: 0;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+/* styles.css */ body { margin: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #6f00ff, #009fff); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
 
-.container {
-  width: 90%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
+.container { text-align: center; padding: 2rem; border-radius: 20px; background: rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); backdrop-filter: blur(10px); color: white; }
 
-header {
-  text-align: center;
-}
+h1 span { font-size: 1.5em; }
 
-header h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
+#searchInput { margin: 1rem 0; padding: 0.8rem; width: 80%; border-radius: 10px; border: none; font-size: 1rem; outline: none; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
 
-#searchInput {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 1em;
-}
+.card-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
 
-.song-list {
-  margin-top: 20px;
-  max-height: 300px;
-  overflow-y: auto;
-}
+.card { background: white; border-radius: 12px; width: 200px; padding: 1rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease; cursor: pointer; }
 
-.song {
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+.card:hover { transform: scale(1.05); }
 
-.song:hover {
-  background-color: rgba(0,0,0,0.5);
-}
+.card img { width: 100%; border-radius: 10px; }
 
-.player {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.card h3 { font-size: 1rem; margin: 0.5rem 0 0; }
 
-.player.hidden {
-  display: none;
-}
+.card p { font-size: 0.9rem; color: #666; margin: 0; }
 
-.player img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  animation: rotate 20s linear infinite;
-}
+.player { margin-top: 2rem; padding: 1rem; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; gap: 1rem; backdrop-filter: blur(10px); animation: fadeIn 0.5s ease-in-out; }
 
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+.hidden { display: none; }
 
-.info {
-  text-align: center;
-  margin-top: 10px;
-}
+.player img { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; }
+
+.song-info { text-align: left; color: white; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
