@@ -121,17 +121,18 @@ section h2 {
 
 .song-info h2 {
   font-size: 1rem;
-  margin: auto;
+  margin: 0;
 }
 .song-info{
   width: 80%;
+  display: flex;
   align-items: center;
 }
 
 .song-info p {
   font-size: 0.8rem;
   color: #aaa;
-  margin: auto;
+  margin: 2px 0;
 }
 
 audio {
