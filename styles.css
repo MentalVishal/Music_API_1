@@ -121,7 +121,9 @@ section h2 {
 
 .song-info h2 {
   font-size: 1rem;
-  margin: 0;
+  width: 70%;
+  
+  margin: auto;
 }
 .song-info{
   width: 90%;
