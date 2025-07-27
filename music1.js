@@ -2,7 +2,7 @@
 
 const searchInput = document.getElementById('searchInput'); const songList = document.getElementById('songList'); const player = document.getElementById('player'); const audio = document.getElementById('audio'); const cover = document.getElementById('cover'); const title = document.getElementById('title'); const artist = document.getElementById('artist');
 
-searchInput.addEventListener('keypress', async (e) => { if (e.key === 'Enter') { const query = searchInput.value.trim(); if (!query) return; songList.innerHTML = '<p>Loading...</p>'; try { const res = await fetch(${apiURL}${query}, { headers }); const data = await res.json(); displaySongs(data.data); } catch (err) { songList.innerHTML = '<p>Error fetching songs.</p>'; } } });
+searchInput.addEventListener('keypress', async (e) => { if (e.key === 'Enter') { const query = searchInput.value.trim(); if (!query) return; songList.innerHTML = '<p>Loading...</p>'; try { const res = await fetch(`${apiURL}${query}`, { headers }); const data = await res.json(); displaySongs(data.data); } catch (err) { songList.innerHTML = '<p>Error fetching songs.</p>'; } } });
 
 function displaySongs(songs) { songList.innerHTML = ''; if (!songs.length) { songList.innerHTML = '<p>No songs found.</p>'; return; } songs.forEach(song => { const card = document.createElement('div'); card.classList.add('card'); card.innerHTML = <img src="${song.album.cover_medium}" alt="cover"> <h3>${song.title}</h3> <p>${song.artist.name}</p> <button>Play</button>; card.querySelector('button').addEventListener('click', () => { playSong(song); }); songList.appendChild(card); }); }
 
