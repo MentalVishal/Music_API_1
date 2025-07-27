@@ -1,4 +1,5 @@
-// script.js const apiURL = 'https://deezerdevs-deezer.p.rapidapi.com/search?q='; const headers = { 'X-RapidAPI-Key': '79c9b84964mshbbfdccaa736ec5cp197f17jsn6f7c6e9bde37', 'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com' };
+// script.js 
+const apiURL = 'https://deezerdevs-deezer.p.rapidapi.com/search?q='; const headers = { 'X-RapidAPI-Key': '79c9b84964mshbbfdccaa736ec5cp197f17jsn6f7c6e9bde37', 'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com' };
 
 const searchInput = document.getElementById('searchInput'); const songList = document.getElementById('songList'); const player = document.getElementById('player'); const audio = document.getElementById('audio'); const cover = document.getElementById('cover'); const title = document.getElementById('title'); const artist = document.getElementById('artist');
 
