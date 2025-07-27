@@ -124,8 +124,9 @@ section h2 {
   margin: 0;
 }
 .song-info{
-  width: 80%;
+  width: 90%;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -136,6 +137,6 @@ section h2 {
 }
 
 audio {
-  width: 75%;
+  width: 60%;
   margin-top: 5px;
 }
