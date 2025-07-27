@@ -1,27 +1,26 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lovely Music Player</title>
-  <link rel="stylesheet" href="music1.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>🎵 Lovely Music Player</h1>
-      <input type="text" id="searchInput" placeholder="Search for a song...">
-    </header>
-    <div class="song-list" id="songList"></div>
-    <div class="player hidden" id="player">
-      <img id="cover" src="" alt="Cover" />
-      <div class="info">
-        <h3 id="title">Title</h3>
-        <p id="artist">Artist</p>
+    <h1><span>🎵</span> Lovely Music Player</h1>
+    <input type="text" id="searchInput" placeholder="Search for a song...">
+    <div id="songList" class="card-container"></div>
+    <div id="player" class="player hidden">
+      <img id="cover" src="" alt="cover">
+      <div class="song-info">
+        <h2 id="title"></h2>
+        <p id="artist"></p>
+        <audio id="audio" controls></audio>
       </div>
-      <audio id="audio" controls autoplay></audio>
     </div>
   </div>
-  <script src="music1.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
